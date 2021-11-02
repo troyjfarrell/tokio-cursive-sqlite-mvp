@@ -1,0 +1,29 @@
+[package]
+name = "tokio-cursive-sqlite-mvp"
+version = "0.1.0"
+authors = ["Troy J. Farrell <troy@entheossoft.com>"]
+edition = "2018"
+
+[[bin]]
+name = "mvp"
+path = "src/mvp/bin/main.rs"
+
+[dependencies]
+crossbeam-channel = "0.5"
+crossterm = "0.19"
+cursive_core = "0.2"
+lazy_static = "1.4.0"
+log = "0.4"
+pretty_env_logger = "0.4"
+retain_mut = "0.1"
+rusqlite = "0.25"
+rusqlite_migration = "0.5"
+
+[dependencies.cursive]
+default-features = false
+features = ["crossterm-backend"]
+version = "0.16"
+
+[dependencies.tokio]
+features = ["macros", "rt-multi-thread", "sync"]
+version = "1"
